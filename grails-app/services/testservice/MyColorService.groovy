@@ -2,10 +2,11 @@ package testservice
 
 class MyColorService {
 
-    List<Color> colorsByShade(String shade) {
+    List<String> colorsByShade(String shade) {
         def shadeId = Shade.findByName(shade)
-        def colors = ColorShade.findAllByShade(shadeId)
-        return colors
+//        def colors = ColorShade.findAllByShade(shadeId)
+//        return ["three","four"]
+        return ColorShade.findAllByShade(1)
     }
 
 }
